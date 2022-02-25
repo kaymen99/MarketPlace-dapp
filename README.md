@@ -112,7 +112,22 @@ Decentralized marketplaces are one of the best use cases of blockchains technolo
 The application allow any user to add a product by providing name, description, price, image.
 ![Capture d’écran 2022-02-25 à 21 54 41](https://user-images.githubusercontent.com/83681204/155807284-c5c6628b-6ec2-417f-b4d5-099c8f13cda1.png)
 
-The platform 
+The platform ensures a good interaction between the seller and the buyer by deviding the purchase process into 4 steps:
+  <ul>
+    <li><b>In Sale:</b> The first state when a seller list it's product on the market </li>
+    <li><b>Pending:</b> When a product is bought the amount paid is locked in the smart contract and buyer waits for seller to sent the product </li>
+    <li><b>Sent:</b> The seller sends the product and waits for the buyer confirmation</li>
+    <li><b>Sold:</b> The buyer confirms the recieval and the funds are transfered to the seller </li> 
+  </ul>
+ 
+All this steps can be performed on the product page: 
+
+![Capture d’écran 2022-02-25 à 22 14 25](https://user-images.githubusercontent.com/83681204/155810800-09765e5d-a4c8-445a-8d7a-efbb652f7ee2.png)
+
+The user can find the list of products he is selling and that he is buying on the My product page:
+
+![Capture d’écran 2022-02-25 à 22 13 38](https://user-images.githubusercontent.com/83681204/155811115-9548ddc0-851a-418c-9f8b-7e27d0c65c74.png)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -122,13 +137,13 @@ The platform
 
 ### Contracts
 
-   The app is based on a single global contract called MarketPlace, it contains all the function that allow :
+   The app is based on a single global contract called MarketPlace, it contains all the function that allows :
 
   <ul>
-    <li><b>SetUploadFee:</b> for every file uploaded the user must pay a small fee set by the owner of the contract</li>
-    <li><b>Upload:</b> allows the user to upload his file </li>
-    <li><b>getUserFiles:</b> a function for getting all the files uploaded by a given user </li>
-    <li><b>Chainlink Price Feed:</b> the contract uses the price feed provided by chainlink oracle for converting the fee set by the owner from $ to MATIC    </li>   
+    <li><b>Admin functions:</b> Allows admin to withdraw market balance and change the fee charged for selling a product</li>
+    <li><b>Seller functions:</b> Allows a seller to add it's products and sent it to the buyer </li>
+    <li><b>Buyers functions:</b> Allows buyer to purchase and confirm the recieval of any product </li>
+    <li><b>Chainlink Price Feed:</b> the contract uses the price feed provided by chainlink oracle for converting the fee set by the owner from $ to ETH </li>   
   </ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -188,11 +203,12 @@ The platform
       
    The files are structured as follows:
     <ul>
+      <li><b>pages:</b> Contains all the app views</li>
       <li><b>Components:</b> Contains all the app component(main, navbar, Account,...) </li>
       <li><b>features:</b> contains the redux toolkit reducer and actions </li>
       <li><b>artifacts:</b> contains all the smart contract data and addresses transfered earlier </li>
       <li><b>NetworksMap:</b> a json file for some known blockchains names & chain id </li> 
-      <li><b>pages:</b> Contains all the app views</li>
+ 
     </ul>
    
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -202,14 +218,6 @@ The platform
 ## Contact
 
 If you have any question or problem running this project just contact me: AymenMir1001@gmail.com
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
