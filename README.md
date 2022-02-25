@@ -95,7 +95,7 @@ Please install or have installed the following:
    
    After creating the app copy the URL from -view key- and run this: 
    ```sh
-   cd ipfs-storage-dapp
+   cd MarketPlace-dapp
    brownie networks add Polygon polygon-mumbai host=<Copied URL> chainid=80001 name="Mumbai Testnet (Alchemy)"
    ```
    
@@ -107,6 +107,7 @@ Please install or have installed the following:
 
 <!-- Working EXAMPLES -->
 ## How it works
+
 Decentralized marketplaces are one of the best use cases of blockchains technologies. They allow people to interact and transact on a global, permission-less, and self-executing platform. Houses, hot sauce, and t-shirts can all be bought and sold without needing to trust a middleman and with smaller fees.
 
 The application allow any user to add a product by providing name, description, price, image.
