@@ -107,9 +107,10 @@ Please install or have installed the following:
 
 <!-- Working EXAMPLES -->
 ## How it works
-Decentralized marketplaces are one of the best use cases of blockchains technologies. They allow people to interact and transact on a global, permission-less, and self-executing platform. Houses, hot sauce, and t-shirts can all be bought and sold without needing to trust a middleman.
+Decentralized marketplaces are one of the best use cases of blockchains technologies. They allow people to interact and transact on a global, permission-less, and self-executing platform. Houses, hot sauce, and t-shirts can all be bought and sold without needing to trust a middleman and with smaller fees.
 
 The application allow any user to add a product by providing name, description, price, image.
+
 ![Capture d’écran 2022-02-25 à 21 54 41](https://user-images.githubusercontent.com/83681204/155807284-c5c6628b-6ec2-417f-b4d5-099c8f13cda1.png)
 
 The platform ensures a good interaction between the seller and the buyer by deviding the purchase process into 4 steps:
