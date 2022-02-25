@@ -124,7 +124,14 @@ The platform ensures a good interaction between the seller and the buyer by devi
  
 All this steps can be performed on the product page: 
 
+<b>From seller point of view: </b>
+
 ![Capture d’écran 2022-02-25 à 22 14 25](https://user-images.githubusercontent.com/83681204/155810800-09765e5d-a4c8-445a-8d7a-efbb652f7ee2.png)
+
+<b>From Buyer point of view: </b>
+
+![Capture d’écran 2022-02-25 à 22 15 35](https://user-images.githubusercontent.com/83681204/155817581-863c328f-42e7-4a02-b925-d79d3caf91dc.png)
+
 
 The user can find the list of products he is selling and that he is buying on the My product page:
 
