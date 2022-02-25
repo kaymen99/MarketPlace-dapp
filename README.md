@@ -5,8 +5,7 @@
 
 ![Capture d’écran 2022-02-25 à 22 13 11](https://user-images.githubusercontent.com/83681204/155805283-d061346c-f93a-4165-a2c9-89c912db7ca3.png)
 
-This is a decentralized marketplace built for EVM blockchain, it enables sellers and buyers from all around the world the buy and sell their products in secure and trustless manner
-using crypto
+This is a decentralized marketplace built for EVM blockchain, it enables sellers and buyers from all around the world the buy and sell their products in secure and trustless manner using cryptocurrency
 
 ### Built With
 
@@ -28,6 +27,7 @@ using crypto
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#usage">How it works</a></li>
     <li>
       <a href="#usage">Usage</a>
       <ul>
