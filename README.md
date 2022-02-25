@@ -194,7 +194,7 @@ The user can find the list of products he is selling and that he is buying on th
    ```
    It uses the following libraries:
       <ul>
-        <li><b>Ethers.js:</b> used as interface between the UI and the smart contract</li>
+        <li><b>Ethers.js:</b> used as interface between the UI and the deployed smart contract</li>
         <li><b>Web3modal:</b> for conecting to Metamask</li>
         <li><b>ipfs-http-client:</b> for connecting  and uploading files to IPFS </li>
         <li><b>@reduxjs/toolkit & redux-persist:</b> for managing the app states (account, balance, blockchain) </li>
@@ -208,7 +208,6 @@ The user can find the list of products he is selling and that he is buying on th
       <li><b>features:</b> contains the redux toolkit reducer and actions </li>
       <li><b>artifacts:</b> contains all the smart contract data and addresses transfered earlier </li>
       <li><b>NetworksMap:</b> a json file for some known blockchains names & chain id </li> 
- 
     </ul>
    
 <p align="right">(<a href="#top">back to top</a>)</p>
