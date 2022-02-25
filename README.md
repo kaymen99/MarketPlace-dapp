@@ -1,7 +1,7 @@
 <div id="top"></div>
 
 <!-- ABOUT THE PROJECT -->
-## Decentralized Marketplace
+## Decentralized Marketplace App
 
 ![Capture d’écran 2022-02-25 à 22 13 11](https://user-images.githubusercontent.com/83681204/155805283-d061346c-f93a-4165-a2c9-89c912db7ca3.png)
 
