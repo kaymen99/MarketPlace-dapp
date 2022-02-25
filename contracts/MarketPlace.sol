@@ -135,12 +135,13 @@ contract MarketPlace {
         inStatus(_id, Status.SENT)
     {
         Product memory product = products[_id];
-        product.status = Status.SOLD;
-
+        
         uint256 priceMinusFee = (convertUSDToETH(product.price) *
             (1000 - sellFee)) / 1000;
 
         product.seller.transfer(priceMinusFee);
+             
+        product.status = Status.SOLD;
         products[_id] = product;
     }
 
@@ -149,7 +150,7 @@ contract MarketPlace {
         onlyBuyer(_id)
         inStatus(_id, Status.PENDING)
     {
-        Product storage product = products[_id];
+        Product memory product = products[_id];
         product.buyer.transfer(convertUSDToETH(product.price));
 
         product.status = Status.INSALE;
