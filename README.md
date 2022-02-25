@@ -27,7 +27,7 @@ This is a decentralized marketplace built for EVM blockchain, it enables sellers
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">How it works</a></li>
+    <li><a href="#how-it-works">How it works</a></li>
     <li>
       <a href="#usage">Usage</a>
       <ul>
@@ -104,6 +104,7 @@ Please install or have installed the following:
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 
 <!-- Working EXAMPLES -->
 ## How it works
