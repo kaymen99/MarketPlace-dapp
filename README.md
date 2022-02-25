@@ -107,16 +107,109 @@ Please install or have installed the following:
 
 <!-- Working EXAMPLES -->
 ## How it works
+Decentralized marketplaces are one of the best use cases of blockchains technologies. They allow people to interact and transact on a global, permission-less, and self-executing platform. Houses, hot sauce, and t-shirts can all be bought and sold without needing to trust a middleman.
 
+The application allow any user to add a product by providing name, description, price, image.
+![Capture d’écran 2022-02-25 à 21 54 41](https://user-images.githubusercontent.com/83681204/155807284-c5c6628b-6ec2-417f-b4d5-099c8f13cda1.png)
+
+The platform 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+### Contracts
+
+   The app is based on a single global contract called MarketPlace, it contains all the function that allow :
+
+  <ul>
+    <li><b>SetUploadFee:</b> for every file uploaded the user must pay a small fee set by the owner of the contract</li>
+    <li><b>Upload:</b> allows the user to upload his file </li>
+    <li><b>getUserFiles:</b> a function for getting all the files uploaded by a given user </li>
+    <li><b>Chainlink Price Feed:</b> the contract uses the price feed provided by chainlink oracle for converting the fee set by the owner from $ to MATIC    </li>   
+  </ul>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+    
+### Scripts
+
+   In your MarketPlace-dapp folder you'll find a directory scripts, it contain all the python code for deploying your contracts and also some useful functions
+
+   The reset.py file is used to remove all previous contracts deployments from build directory:
+   ```sh
+   brownie run scripts/reset.py
+   ```
+   The deploy.py file allow the deployment to the blockchain, we'll use the local ganache for now:
+   ```sh
+   brownie run scripts/deploy.py --network ganache-local
+   ```
+   The update_front_end.py is used to transfer all the smart contracts data (abi,...) and addresses to the front end in the artifacts directory:
+   ```sh
+   brownie run scripts/update_front_end.py
+   ```
+   
+   After running this 3 cammands, the MarketPlace contract is now deployed and is integrated with the front end
+   
+ <p align="right">(<a href="#top">back to top</a>)</p>
+  
+ ### Testing
+
+   In your MarketPlace-dapp folder you'll find a directory tests, it contain all the python code used for testing the smart contract functionalities
+   
+   You can run all the tests by :
+   ```sh
+   brownie test
+   ```
+   Or you can test each function individualy:
+   ```sh
+   brownie test -k <function name>
+   ```
+   
+<p align="right">(<a href="#top">back to top</a>)</p>
+   
+### Front-end
+   
+   The user interface of this application is build using React JS, it can be started by running: 
+   ```sh
+   cd front-end
+   yarn
+   yarn start
+   ```
+   It uses the following libraries:
+      <ul>
+        <li><b>Ethers.js:</b> used as interface between the UI and the smart contract</li>
+        <li><b>Web3modal:</b> for conecting to Metamask</li>
+        <li><b>ipfs-http-client:</b> for connecting  and uploading files to IPFS </li>
+        <li><b>@reduxjs/toolkit & redux-persist:</b> for managing the app states (account, balance, blockchain) </li>
+        <li><b>Material UI:</b> used for react components and styles </li>    
+      </ul>
+      
+   The files are structured as follows:
+    <ul>
+      <li><b>Components:</b> Contains all the app component(main, navbar, Account,...) </li>
+      <li><b>features:</b> contains the redux toolkit reducer and actions </li>
+      <li><b>artifacts:</b> contains all the smart contract data and addresses transfered earlier </li>
+      <li><b>NetworksMap:</b> a json file for some known blockchains names & chain id </li> 
+      <li><b>pages:</b> Contains all the app views</li>
+    </ul>
+   
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- Contact -->
 ## Contact
 
 If you have any question or problem running this project just contact me: AymenMir1001@gmail.com
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
