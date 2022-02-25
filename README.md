@@ -139,7 +139,7 @@ The user can find the list of products he is selling and that he is buying on th
 
 ### Contracts
 
-   The app is based on a single global contract called MarketPlace, it contains all the function that allows :
+   The app is based on a single global contract called MarketPlace, it contains the following functions :
 
   <ul>
     <li><b>Admin functions:</b> Allows admin to withdraw market balance and change the fee charged for selling a product</li>
