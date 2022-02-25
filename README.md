@@ -37,7 +37,6 @@ This is a decentralized marketplace built for EVM blockchain, it enables sellers
         <li><a href="#front-end">Front End</a></li>
       </ul>
     </li>
-    <li><a href="#resources">Resources</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#license">License</a></li>
   </ol>
