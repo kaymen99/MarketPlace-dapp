@@ -127,7 +127,7 @@ All this steps can be performed on the product page:
 
 The user can find the list of products he is selling and that he is buying on the My product page:
 
-![Capture d’écran 2022-02-25 à 22 13 38](https://user-images.githubusercontent.com/83681204/155811115-9548ddc0-851a-418c-9f8b-7e27d0c65c74.png)
+![Capture d’écran 2022-02-25 à 23 37 46](https://user-images.githubusercontent.com/83681204/155812701-9ea81d52-a109-4b1b-a49a-9d0a3f13e18b.png)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
