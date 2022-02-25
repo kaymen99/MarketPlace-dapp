@@ -134,7 +134,7 @@ contract MarketPlace {
         onlyBuyer(_id)
         inStatus(_id, Status.SENT)
     {
-        Product storage product = products[_id];
+        Product memory product = products[_id];
         product.status = Status.SOLD;
 
         uint256 priceMinusFee = (convertUSDToETH(product.price) *
