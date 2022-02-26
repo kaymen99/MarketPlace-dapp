@@ -69,8 +69,8 @@ Please install or have installed the following:
    
 3. Clone the repo:
    ```sh
-   git clone https://github.com/Aymen1001/ipfs-storage-dapp.git
-   cd ipfs-storage-dapp
+   git clone https://github.com/Aymen1001/MarketPlace-dapp.git
+   cd MarketPlace-dapp
    ```
 3. Install Ganache:
    Ganache is a local blockchain that run on your machine, it's used during development stages because it allows quick smart contract testing and avoids all real         Testnets problems. 
@@ -78,28 +78,27 @@ Please install or have installed the following:
    
    Next, you need to setup the ganache network with brownie :
    ```sh
-   cd ipfs-storage-dapp
+   cd MarketPlace-dapp
    brownie networks add development ganache-local cmd=ganache-cli host=http://127.0.0.1 accounts=10 mnemonic=brownie port=8545
    ```
 4. Set your environment variables
-   To be able to deploy to real Polygon testnets you need to add your PRIVATE_KEY (You can find your PRIVATE_KEY from your ethereum wallet like metamask) to the .env file:
+   To be able to deploy to real testnets you need to add your PRIVATE_KEY (You can find your PRIVATE_KEY from your ethereum wallet like metamask) to the .env file:
    ```
    PRIVATE_KEY=<PRIVATE_KEY>
    ```
-   In this project i used the Polygon Testnet but you can choose to use ethereum testnets like rinkeby, Kovan.
+   You can choose to use ethereum testnets like rinkeby, Kovan or any other evm compatible testnet.
    
-   To setup the Polygon Testnet with brownie you'll need an Alchemy account (it's free) and just create a new app on the polygon network
+   To setup the ethereum  Testnet with brownie you'll need an Alchemy account (it's free) and just create a new app on the ethereum  network
    
    ![Capture d’écran 2022-01-25 à 00 14 44](https://user-images.githubusercontent.com/83681204/150881084-9b60349e-def0-44d2-bbb2-8ca7e27157c7.png)
-   
-   
+  
    After creating the app copy the URL from -view key- and run this: 
    ```sh
    cd MarketPlace-dapp
-   brownie networks add Polygon polygon-mumbai host=<Copied URL> chainid=80001 name="Mumbai Testnet (Alchemy)"
+   brownie networks add <Blockchain> <network name> host=<Copied URL> chainid=80001 name="Mumbai Testnet (Alchemy)"
    ```
    
-   You'll also need testnet MATIC. You can get MATIC into your wallet by using the Polygon testnet faucets located [here](https://faucet.polygon.technology). 
+   You'll also need some eth in the testnet. You can get it into your wallet by using a public faucet. 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
