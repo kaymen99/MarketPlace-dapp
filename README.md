@@ -27,9 +27,9 @@ This is a decentralized marketplace built for EVM blockchain, it enables sellers
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#how-it-works">How it Works</a></li>
     <li>
-      <a href="#usage">How to use</a>
+      <a href="#usage">How to Use</a>
       <ul>
         <li><a href="#contracts">Contracts</a></li>
         <li><a href="#scripts">Scripts</a></li>
@@ -106,7 +106,7 @@ Please install or have installed the following:
 
 
 <!-- Working EXAMPLES -->
-## How it works
+## How it Works
 
 Decentralized marketplaces are one of the best use cases of blockchains technologies. They allow people to interact and transact on a global, permission-less, and self-executing platform. Houses, hot sauce, and t-shirts can all be bought and sold without needing to trust a middleman and with smaller fees.
 
@@ -142,7 +142,7 @@ The user can find the list of products he is selling and that he is buying on th
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## How to Use
 
 ### Contracts
 
