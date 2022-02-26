@@ -5,7 +5,7 @@
 
 ![Capture d’écran 2022-02-25 à 22 13 11](https://user-images.githubusercontent.com/83681204/155805283-d061346c-f93a-4165-a2c9-89c912db7ca3.png)
 
-This is a decentralized marketplace built for EVM blockchain, it enables sellers and buyers from all around the world to buy and sell their products in secure and trustless manner, and even thought products are listed in $ (to avoid the volatility of the crypto market) all the payment are done using cryptocurrencies (ETH, MATIC,...) and all the purchase steps are controled by the MarketPlace smart contract logic.
+This is a decentralized marketplace built for EVM compatible blockchains, it enables sellers and buyers from all around the world to buy and sell their products in secure and trustless manner, and even thought products are listed in $ (to avoid the volatility of the crypto market) all the payment are done using cryptocurrencies (ETH, MATIC,...) and all the purchase steps are controled by the MarketPlace smart contract logic.
 
 ### Built With
 
