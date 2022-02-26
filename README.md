@@ -148,10 +148,10 @@ The user can find the list of products he is selling and that he is buying on th
    The app is based on a single global contract called MarketPlace, it contains the following functions :
 
   <ul>
-    <li><b>Admin functions:</b> Allows admin to withdraw market balance and change the fee charged for selling a product</li>
-    <li><b>Seller functions:</b> Allows a seller to add it's products, change it's price and sent it to the buyer </li>
-    <li><b>Buyers functions:</b> Allows buyer to purchase and confirm the recieval of any product </li>
-    <li><b>Chainlink Price Feed:</b> the contract uses the price feed provided by chainlink oracle for converting the fee set by the owner from $ to ETH </li>   
+    <li><b>Admin functions:</b> Allow admin to withdraw market balance and change the fee charged for selling a product</li>
+    <li><b>Seller functions:</b> Allow a seller to add it's product, change it's price and sent it to the buyer </li>
+    <li><b>Buyers functions:</b> Allow buyer to purchase and confirm the recieval of any product </li>
+    <li><b>Chainlink Price Feed:</b> the contract uses the price feed provided by chainlink oracle for converting the products prices from $ to ETH </li>   
   </ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -166,7 +166,7 @@ The user can find the list of products he is selling and that he is buying on th
    ```
    The deploy.py file allow the deployment to the blockchain, we'll use the local ganache for now:
    ```sh
-   brownie run scripts/deploy.py --network ganache-local
+   brownie run scripts/deploy.py --network=ganache-local
    ```
    The update_front_end.py is used to transfer all the smart contracts data (abi,...) and addresses to the front end in the artifacts directory:
    ```sh
