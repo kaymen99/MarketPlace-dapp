@@ -5,7 +5,7 @@
 
 ![Capture d’écran 2022-02-25 à 22 13 11](https://user-images.githubusercontent.com/83681204/155805283-d061346c-f93a-4165-a2c9-89c912db7ca3.png)
 
-This is a decentralized marketplace built for EVM blockchain, it enables sellers and buyers from all around the world the buy and sell their products in secure and trustless manner using cryptocurrency
+This is a decentralized marketplace built for EVM blockchain, it enables sellers and buyers from all around the world to buy and sell their products in secure and trustless manner, and even thought products are listed in $ (to avoid the volatility of the crypto market) all the payment are done using cryptocurrencies (ETH, MATIC,...) and all the purchase steps are controled by the MarketPlace smart contract logic.
 
 ### Built With
 
@@ -29,7 +29,7 @@ This is a decentralized marketplace built for EVM blockchain, it enables sellers
     </li>
     <li><a href="#how-it-works">How it works</a></li>
     <li>
-      <a href="#usage">Usage</a>
+      <a href="#usage">How to use</a>
       <ul>
         <li><a href="#contracts">Contracts</a></li>
         <li><a href="#scripts">Scripts</a></li>
@@ -110,13 +110,13 @@ Please install or have installed the following:
 
 Decentralized marketplaces are one of the best use cases of blockchains technologies. They allow people to interact and transact on a global, permission-less, and self-executing platform. Houses, hot sauce, and t-shirts can all be bought and sold without needing to trust a middleman and with smaller fees.
 
-The application allow any user to add a product by providing name, description, price, image.
+The application allow any user to add a product by providing name, description, price in $, image.
 
 ![Capture d’écran 2022-02-25 à 21 54 41](https://user-images.githubusercontent.com/83681204/155807284-c5c6628b-6ec2-417f-b4d5-099c8f13cda1.png)
 
-The platform ensures a good interaction between the seller and the buyer by deviding the purchase process into 4 steps:
+The platform ensures a good interaction between the seller and the buyer by deviding the purchase process (product state) into 4 steps:
   <ul>
-    <li><b>In Sale:</b> The first state when a seller list it's product on the market </li>
+    <li><b>In Sale:</b> The first step when a seller list it's product on the market </li>
     <li><b>Pending:</b> When a product is bought the amount paid is locked in the smart contract and buyer waits for seller to sent the product </li>
     <li><b>Sent:</b> The seller sends the product and waits for the buyer confirmation</li>
     <li><b>Sold:</b> The buyer confirms the recieval and the funds are transfered to the seller </li> 
@@ -124,11 +124,11 @@ The platform ensures a good interaction between the seller and the buyer by devi
  
 All this steps can be performed on the product page: 
 
-<b>From seller point of view: </b>
+<b>Seller point of view: </b>
 
 ![Capture d’écran 2022-02-25 à 22 14 25](https://user-images.githubusercontent.com/83681204/155810800-09765e5d-a4c8-445a-8d7a-efbb652f7ee2.png)
 
-<b>From Buyer point of view: </b>
+<b>Buyer point of view: </b>
 
 ![Capture d’écran 2022-02-25 à 22 15 35](https://user-images.githubusercontent.com/83681204/155817581-863c328f-42e7-4a02-b925-d79d3caf91dc.png)
 
@@ -150,7 +150,7 @@ The user can find the list of products he is selling and that he is buying on th
 
   <ul>
     <li><b>Admin functions:</b> Allows admin to withdraw market balance and change the fee charged for selling a product</li>
-    <li><b>Seller functions:</b> Allows a seller to add it's products and sent it to the buyer </li>
+    <li><b>Seller functions:</b> Allows a seller to add it's products, change it's price and sent it to the buyer </li>
     <li><b>Buyers functions:</b> Allows buyer to purchase and confirm the recieval of any product </li>
     <li><b>Chainlink Price Feed:</b> the contract uses the price feed provided by chainlink oracle for converting the fee set by the owner from $ to ETH </li>   
   </ul>
@@ -159,7 +159,7 @@ The user can find the list of products he is selling and that he is buying on th
     
 ### Scripts
 
-   In your MarketPlace-dapp folder you'll find a directory scripts, it contain all the python code for deploying your contracts and also some useful functions
+   In the MarketPlace-dapp folder you'll find a directory scripts, it contain all the python code for deploying your contracts and also some useful functions
 
    The reset.py file is used to remove all previous contracts deployments from build directory:
    ```sh
@@ -180,7 +180,7 @@ The user can find the list of products he is selling and that he is buying on th
   
  ### Testing
 
-   In your MarketPlace-dapp folder you'll find a directory tests, it contain all the python code used for testing the smart contract functionalities
+   In the MarketPlace-dapp folder you'll find a directory tests, it contain all the python code used for testing the smart contract functionalities
    
    You can run all the tests by :
    ```sh
