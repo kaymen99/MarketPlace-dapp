@@ -45,8 +45,9 @@ def test_add_product():
     assert product[3] == PRODUCT_DESCRIPTION
     assert product[4] == PRODUCT_IMAGE
     assert product[5] == PRODUCT_PRICE
-    assert product[6] == ZERO_ADDRESS # buyer
-    assert product[7] == PRODUCT_STATUS["INSALE"]
+    assert product[6] == 0
+    assert product[7] == ZERO_ADDRESS # buyer
+    assert product[8] == PRODUCT_STATUS["INSALE"]
     assert len(market.getAllProducts()) == 1
 
 def test_convert_price_to_eth():
@@ -84,8 +85,9 @@ def test_purchase_product():
 
     product = market.getAllProducts()[product_id]
 
-    assert product[6] == buyer
-    assert product[7] == PRODUCT_STATUS["PENDING"]
+    assert product[6] == price_in_eth
+    assert product[7] == buyer
+    assert product[8] == PRODUCT_STATUS["PENDING"]
 
 def test_cancel_purchase():
     admin, market = deploy_market()
@@ -111,8 +113,9 @@ def test_cancel_purchase():
 
     product = market.getAllProducts()[product_id]
 
-    assert product[6] == ZERO_ADDRESS # buyer == 0x0000
-    assert product[7] == PRODUCT_STATUS["INSALE"]
+    assert product[6] == 0
+    assert product[7] == ZERO_ADDRESS # buyer == 0x0000
+    assert product[8] == PRODUCT_STATUS["INSALE"]
 
 def test_send_product():
 
@@ -139,7 +142,7 @@ def test_send_product():
 
     product = market.getAllProducts()[product_id]
 
-    assert product[7] == PRODUCT_STATUS["SENT"]
+    assert product[8] == PRODUCT_STATUS["SENT"]
 
 def test_confirm_recieved():
 
@@ -172,7 +175,7 @@ def test_confirm_recieved():
 
     product = market.getAllProducts()[product_id]
 
-    assert product[7] == PRODUCT_STATUS["SOLD"]
+    assert product[8] == PRODUCT_STATUS["SOLD"]
 
     assert float(fromWei(seller_after_sale_balance)) == float(fromWei(seller_before_sale_balance)) + float(fromWei(price_in_eth)) * 0.995
 
