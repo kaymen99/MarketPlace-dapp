@@ -3,7 +3,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Decentralized Marketplace App
 
-![Capture d’écran 2022-02-25 à 22 13 11](https://user-images.githubusercontent.com/83681204/155805283-d061346c-f93a-4165-a2c9-89c912db7ca3.png)
+![Capture d’écran 2022-03-03 à 22 56 04](https://user-images.githubusercontent.com/83681204/156659942-75f846d0-eb92-44d9-9bf0-c8d80082e3dd.png)
 
 This is a decentralized marketplace built for EVM compatible blockchains, it enables sellers and buyers from all around the world to buy and sell their products in secure and trustless manner, and even thought products are listed in $ (to avoid the volatility of the crypto market) all the payment are done using cryptocurrencies (ETH, MATIC,...) and all the purchase steps are controled by the MarketPlace smart contract logic.
 
@@ -109,9 +109,9 @@ Please install or have installed the following:
 
 Decentralized marketplaces are one of the best use cases of blockchains technologies. They allow people to interact and transact on a global, permission-less, and self-executing platform. Houses, hot sauce, and t-shirts can all be bought and sold without needing to trust a middleman and with smaller fees.
 
-The application allow any user to add a product by providing name, description, price in $, image.
+The application allow any user to add a product by providing the product name, description, price in $ and image.
 
-![Capture d’écran 2022-02-25 à 21 54 41](https://user-images.githubusercontent.com/83681204/155807284-c5c6628b-6ec2-417f-b4d5-099c8f13cda1.png)
+![Capture d’écran 2022-03-03 à 22 36 53](https://user-images.githubusercontent.com/83681204/156659996-a7467dd4-267f-4a61-a6ec-be8601b79400.png)
 
 The platform ensures a good interaction between the seller and the buyer by deviding the purchase process (product state) into 4 steps:
   <ul>
@@ -125,16 +125,16 @@ All this steps can be performed on the product page:
 
 <b>Seller point of view: </b>
 
-![Capture d’écran 2022-02-25 à 22 14 25](https://user-images.githubusercontent.com/83681204/155810800-09765e5d-a4c8-445a-8d7a-efbb652f7ee2.png)
+![Capture d’écran 2022-03-03 à 22 37 35](https://user-images.githubusercontent.com/83681204/156660145-aacb1ff4-2ba3-44d5-8bb9-87c927571b6b.png)
 
 <b>Buyer point of view: </b>
 
-![Capture d’écran 2022-02-25 à 22 15 35](https://user-images.githubusercontent.com/83681204/155817581-863c328f-42e7-4a02-b925-d79d3caf91dc.png)
+![Capture d’écran 2022-03-03 à 22 50 59](https://user-images.githubusercontent.com/83681204/156660202-5bbb40db-ccf6-4a9f-88eb-3b407eca0211.png)
 
 
 The user can find the list of products he is selling and that he is buying on the My product page:
 
-![Capture d’écran 2022-02-25 à 23 37 46](https://user-images.githubusercontent.com/83681204/155812701-9ea81d52-a109-4b1b-a49a-9d0a3f13e18b.png)
+![Capture d’écran 2022-03-03 à 22 59 21](https://user-images.githubusercontent.com/83681204/156660090-ba1333a3-17c5-4c18-91d2-f579478739ff.png)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
