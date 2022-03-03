@@ -111,7 +111,7 @@ Decentralized marketplaces are one of the best use cases of blockchains technolo
 
 The application allow any user to add a product by providing the product name, description, price in $ and image.
 
-![Capture d’écran 2022-03-03 à 22 36 53](https://user-images.githubusercontent.com/83681204/156659996-a7467dd4-267f-4a61-a6ec-be8601b79400.png)
+![Capture d’écran 2022-03-03 à 22 36 53](https://user-images.githubusercontent.com/83681204/156660595-9432f950-941d-465f-ad69-bb0edaad32b7.png)
 
 The platform ensures a good interaction between the seller and the buyer by deviding the purchase process (product state) into 4 steps:
   <ul>
