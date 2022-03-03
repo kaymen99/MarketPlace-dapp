@@ -28,7 +28,8 @@ contract MarketPlace {
         string name;
         string description;
         string image;
-        uint256 price;
+        uint256 priceInUSD;
+        uint256 buyPriceInETH;
         address payable buyer;
         Status status;
     }
@@ -96,6 +97,7 @@ contract MarketPlace {
                 _description,
                 _image,
                 _price,
+                0,
                 payable(address(0)),
                 Status.INSALE
             )
@@ -111,12 +113,13 @@ contract MarketPlace {
         inStatus(_id, Status.INSALE)
     {
         Product memory product = products[_id];
-        require(
-            msg.value == convertUSDToETH(product.price),
-            "insuffisant amount"
-        );
-        products[_id].buyer = payable(msg.sender);
-        products[_id].status = Status.PENDING;
+        uint256 priceInETH = convertUSDToETH(product.priceInUSD);
+        require(msg.value == priceInETH, "insuffisant amount");
+
+        product.buyer = payable(msg.sender);
+        product.buyPriceInETH = priceInETH;
+        product.status = Status.PENDING;
+        products[_id] = product;
     }
 
     function sendProduct(uint256 _id)
@@ -124,8 +127,6 @@ contract MarketPlace {
         onlySeller(_id)
         inStatus(_id, Status.PENDING)
     {
-        Product memory product = products[_id];
-
         products[_id].status = Status.SENT;
     }
 
@@ -135,12 +136,10 @@ contract MarketPlace {
         inStatus(_id, Status.SENT)
     {
         Product memory product = products[_id];
-        
-        uint256 priceMinusFee = (convertUSDToETH(product.price) *
-            (1000 - sellFee)) / 1000;
+        uint256 priceMinusFee = (product.buyPriceInETH * (1000 - sellFee)) /
+            1000;
 
         product.seller.transfer(priceMinusFee);
-             
         product.status = Status.SOLD;
         products[_id] = product;
     }
@@ -151,11 +150,11 @@ contract MarketPlace {
         inStatus(_id, Status.PENDING)
     {
         Product memory product = products[_id];
-        product.buyer.transfer(convertUSDToETH(product.price));
+        product.buyer.transfer(product.buyPriceInETH);
 
+        product.buyPriceInETH = 0;
         product.status = Status.INSALE;
         product.buyer = payable(address(0));
-
         products[_id] = product;
     }
 
@@ -172,7 +171,7 @@ contract MarketPlace {
         onlySeller(_id)
         inStatus(_id, Status.INSALE)
     {
-        products[_id].price = _newPrice;
+        products[_id].priceInUSD = _newPrice;
     }
 
     function getProductDetails(uint256 _productId)
