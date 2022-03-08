@@ -139,7 +139,10 @@ contract MarketPlace {
         uint256 priceMinusFee = (product.buyPriceInETH * (1000 - sellFee)) /
             1000;
 
+        uint256 fee = (product.buyPriceInETH * sellFee) / 1000;
+
         product.seller.transfer(priceMinusFee);
+        admin.transfer(fee);
         product.status = Status.SOLD;
         products[_id] = product;
     }
@@ -211,9 +214,5 @@ contract MarketPlace {
 
     function changeFee(uint256 _newFee) public onlyAdmin {
         sellFee = _newFee;
-    }
-
-    function withdrawBalance() public onlyAdmin {
-        admin.transfer(address(this).balance);
     }
 }
