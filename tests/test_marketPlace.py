@@ -147,6 +147,7 @@ def test_send_product():
 def test_confirm_recieved():
 
     admin, market = deploy_market()
+    admin_initial_balance = admin.balance()
 
     seller = get_account(1)
     seller_before_sale_balance = seller.balance()
@@ -175,6 +176,10 @@ def test_confirm_recieved():
 
     product = market.getAllProducts()[product_id]
 
+    admin_final_balance = admin.balance()
+
+    assert float(fromWei(admin_final_balance)) == float(fromWei(admin_initial_balance)) + float(fromWei(price_in_eth)) * 0.005
+
     assert product[8] == PRODUCT_STATUS["SOLD"]
 
     assert float(fromWei(seller_after_sale_balance)) == float(fromWei(seller_before_sale_balance)) + float(fromWei(price_in_eth)) * 0.995
@@ -200,40 +205,6 @@ def test_remove_product():
     # seller is zero address
     assert product[1] == ZERO_ADDRESS
 
-def test_withdraw_market_balance():
-    admin, market = deploy_market()
-    admin_initial_balance = admin.balance()
-
-    seller = get_account(1)
-
-    add_tx = market.addProduct(
-        PRODUCT_NAME, PRODUCT_DESCRIPTION, PRODUCT_IMAGE, PRODUCT_PRICE, {"from": seller}
-    )
-    add_tx.wait(1)
-
-    buyer = get_account(2)
-
-    product_id = 0
-
-    price_in_eth = market.convertUSDToETH.call(PRODUCT_PRICE)
-
-    purchase_tx = market.purchase(product_id, {"from": buyer, "value": price_in_eth})
-    purchase_tx.wait(1)
-
-    send_tx = market.sendProduct(product_id, {"from": seller})
-    send_tx.wait(1)
-
-    confirm_tx = market.confirmRecieved(product_id, {"from": buyer})
-    confirm_tx.wait(1)
-
-    withdraw_tx = market.withdrawBalance({"from": admin})
-    withdraw_tx.wait(1)
-
-    admin_final_balance = admin.balance()
-
-    assert float(fromWei(admin_final_balance)) == float(fromWei(admin_initial_balance)) + float(fromWei(price_in_eth)) * 0.005
-    assert market.balance() == 0
-
 def test_admin_modifier():
     if network.show_active() not in LOCAL_BLOCKCHAINS:
         pytest.skip()
@@ -248,7 +219,8 @@ def test_admin_modifier():
 
     # check that only admin can change the fees
     with brownie.reverts("only admin can call this"):
-        change_tx = market.withdrawBalance({"from": random_user})
+        new_fee = 6
+        change_tx = market.changeFee(new_fee, {"from": random_user})
         change_tx.wait(1)
 
 def test_not_seller():
