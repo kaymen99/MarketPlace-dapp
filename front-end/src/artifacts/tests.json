@@ -1,0 +1,48 @@
+{
+  "contracts": {
+    "MarketPlace": "0bf39a0985b32f1e889dbc689aefc02c2bf6aa58",
+    "MockV3Aggregator": "9e734e161b5cafcca52a917f10266f5a8bc05b28"
+  },
+  "tests": {
+    "tests/test_marketPlace.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "..........",
+      "sha1": "397a43906210e47fb8e4b6e3b8ddae1210969c19",
+      "txhash": [
+        "bfe2da3797fcf8a96d674bfab282ab9c4b08552e",
+        "e4990fb6289579b473ed21d7a2440aa8818ea251",
+        "fd7f62fa95d313d9d39099e5681a1dec25395db0"
+      ]
+    }
+  },
+  "tx": {
+    "bfe2da3797fcf8a96d674bfab282ab9c4b08552e": {
+      "MarketPlace": {
+        "1": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "e4990fb6289579b473ed21d7a2440aa8818ea251": {
+      "MarketPlace": {
+        "1": [
+          [],
+          [],
+          []
+        ]
+      }
+    },
+    "fd7f62fa95d313d9d39099e5681a1dec25395db0": {
+      "MarketPlace": {
+        "1": [
+          [],
+          [],
+          []
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "5777": {
+    "MarketPlace": [
+      "0x10499DBD34Cc93A126EecD79771dD3E53D391cC4"
+    ],
+    "MockV3Aggregator": [
+      "0xeEe4A5343fB495e3b6637ad00b1A39a7D5527faB"
+    ]
+  }
+}
