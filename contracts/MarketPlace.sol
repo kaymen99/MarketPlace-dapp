@@ -112,14 +112,14 @@ contract MarketPlace {
         notSeller(_id)
         inStatus(_id, Status.INSALE)
     {
-        Product memory product = products[_id];
-        uint256 priceInETH = convertUSDToETH(product.priceInUSD);
+        Product memory _product = products[_id];
+        uint256 priceInETH = convertUSDToETH(_product.priceInUSD);
         require(msg.value == priceInETH, "insuffisant amount");
 
-        product.buyer = payable(msg.sender);
-        product.buyPriceInETH = priceInETH;
-        product.status = Status.PENDING;
-        products[_id] = product;
+        _product.buyer = payable(msg.sender);
+        _product.buyPriceInETH = priceInETH;
+        _product.status = Status.PENDING;
+        products[_id] = _product;
     }
 
     function sendProduct(uint256 _id)
@@ -135,16 +135,18 @@ contract MarketPlace {
         onlyBuyer(_id)
         inStatus(_id, Status.SENT)
     {
-        Product memory product = products[_id];
-        uint256 priceMinusFee = (product.buyPriceInETH * (1000 - sellFee)) /
+        Product memory _product = products[_id];
+        _product.status = Status.SOLD;
+
+        uint256 priceMinusFee = (_product.buyPriceInETH * (1000 - sellFee)) /
             1000;
 
-        uint256 fee = (product.buyPriceInETH * sellFee) / 1000;
+        uint256 fee = (_product.buyPriceInETH * sellFee) / 1000;
 
-        product.seller.transfer(priceMinusFee);
+        _product.seller.transfer(priceMinusFee);
         admin.transfer(fee);
-        product.status = Status.SOLD;
-        products[_id] = product;
+
+        products[_id] = _product;
     }
 
     function cancelPurchase(uint256 _id)
@@ -152,13 +154,13 @@ contract MarketPlace {
         onlyBuyer(_id)
         inStatus(_id, Status.PENDING)
     {
-        Product memory product = products[_id];
-        product.buyer.transfer(product.buyPriceInETH);
+        Product memory _product = products[_id];
+        _product.buyer.transfer(_product.buyPriceInETH);
 
-        product.buyPriceInETH = 0;
-        product.status = Status.INSALE;
-        product.buyer = payable(address(0));
-        products[_id] = product;
+        _product.buyPriceInETH = 0;
+        _product.status = Status.INSALE;
+        _product.buyer = payable(address(0));
+        products[_id] = _product;
     }
 
     function remove(uint256 _id)
