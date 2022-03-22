@@ -78,7 +78,6 @@ Please install or have installed the following:
    
    Next, you need to setup the ganache network with brownie :
    ```sh
-   cd MarketPlace-dapp
    brownie networks add development ganache-local cmd=ganache-cli host=http://127.0.0.1 accounts=10 mnemonic=brownie port=8545
    ```
 4. Set your environment variables
