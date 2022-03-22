@@ -93,7 +93,6 @@ Please install or have installed the following:
   
    After creating the app copy the URL from -view key- and run this: 
    ```sh
-   cd MarketPlace-dapp
    brownie networks add <Blockchain> <network name> host=<Copied URL> chainid=80001 name="<network name>"
    ```
    
