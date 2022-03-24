@@ -222,7 +222,7 @@ The user can find the list of products he is selling and that he is buying on th
 <!-- Contact -->
 ## Contact
 
-If you have any question or problem running this project just contact me: AymenMir1001@gmail.com
+If you have any question or problem running this project just contact me: aymenMir1001@gmail.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
