@@ -93,7 +93,7 @@ Please install or have installed the following:
   
    After creating the app copy the URL from -view key- and run this: 
    ```sh
-   brownie networks add <Blockchain> <network name> host=<Copied URL> chainid=80001 name="<network name>"
+   brownie networks add development <network name> cmd=ganache-cli host=<Copied URL> accounts=10 mnemonic=brownie port=8545
    ```
    
    You'll also need some eth in the testnet. You can get it into your wallet by using a public faucet. 
