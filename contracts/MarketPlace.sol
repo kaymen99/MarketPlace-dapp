@@ -54,7 +54,7 @@ contract MarketPlace {
     }
 
     modifier onlySeller(uint256 _id) {
-        require(msg.sender == products[_id].seller, "only buyer can call this");
+        require(msg.sender == products[_id].seller, "only seller can call this");
         _;
     }
 
