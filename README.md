@@ -51,6 +51,7 @@ This is a decentralized marketplace built for EVM compatible blockchains, it ena
 Please install or have installed the following:
 * [nodejs and npm](https://nodejs.org/en/download/) 
 * [python](https://www.python.org/downloads/)
+* [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) Chrome extension installed in your browser
 
 ### Installation
 
