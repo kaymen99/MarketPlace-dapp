@@ -210,7 +210,7 @@ The user can find the list of products he is selling and that he is buying on th
       
    The files are structured as follows:
     <ul>
-      <li><b>pages:</b> Contains all the app views</li>
+      <li><b>pages:</b> Contains all the app views (MarketPage, ProductPage,...)</li>
       <li><b>Components:</b> Contains all the app component(main, navbar, Account,...) </li>
       <li><b>features:</b> contains the redux toolkit reducer and actions </li>
       <li><b>artifacts:</b> contains all the smart contract data and addresses transfered earlier </li>
